@@ -1,8 +1,6 @@
 /**
  * 
  */
-package com.wowocai.tools;
-
 import java.io.File;
 import java.util.List;
 
