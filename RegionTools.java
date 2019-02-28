@@ -14,8 +14,7 @@ import org.apache.commons.io.FileUtils;
  */
 public class RegionTools {
 
-    // 数据表自己创建
-    public static final String formatter = "insert into t_regions(id,parent_id,level,name) value('%s','%s','%s','%s');\n";
+    public static final String formatter = "insert into regions(id,parent_id,level,name) values('%s','%s','%s','%s');\n";
 
     public static final String buildSQL(String line) {
 
@@ -49,8 +48,7 @@ public class RegionTools {
     }
 
     public static void main(String[] args) throws Exception {
-        // 全国行政区域数据，每年定期更新
-        //http://www.mca.gov.cn/article/sj/xzqh/2018/
+        // 数据在 http://www.mca.gov.cn/article/sj/xzqh/2018/
         List<String> lines = FileUtils.readLines(new File("e:\\temp\\行政区域.txt"), "UTF-8");
         File file = new File("e:\\temp\\sql.txt");
         for (int i = 0; i < lines.size(); i++) {
